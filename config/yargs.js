@@ -20,6 +20,7 @@ const argv =require('yargs')
                     alias:'c'
                 }
             })
+            .command('checkDB','Permite crear un achivo para realizar los resguardos')
             .command('borrar','permite borrar una actividad',{
 
             })            

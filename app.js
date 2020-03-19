@@ -1,16 +1,22 @@
 const argv=require('./config/yargs').argv,
       {crearActividad,actualizarAct}=require('./exec/actions'),
+      {checkdb}=require('./exec/dataBase'),
       {colors}=require('./config/colors'),
         comando=argv._[0];
 
 
 
 switch (comando) {
+    case 'checkDB':
+        checkdb();
+        
+        break;
     case 'crear':
+       
         crearActividad(argv.act);
         break;
     case 'actualizar':
-        actualizarAct(argv.act,argv.completado);
+        actualizarAct(argv.act, argv.completado);
         break;
     case 'listar':
         
